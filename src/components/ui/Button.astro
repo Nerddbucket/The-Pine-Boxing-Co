@@ -1,0 +1,32 @@
+---
+interface Props {
+  href?: string;
+  variant?: 'solid-red' | 'ghost-white';
+  class?: string;
+}
+
+const { href, variant = 'solid-red', class: className = '' } = Astro.props;
+
+const base =
+  'inline-flex items-center justify-center px-8 py-3 font-display text-lg tracking-wider transition-colors duration-200';
+
+const variants = {
+  'solid-red': 'bg-pines-red text-pines-white hover:bg-red-700',
+  'ghost-white':
+    'border border-pines-white bg-transparent text-pines-white hover:bg-pines-white hover:text-pines-black',
+};
+
+const classes = [base, variants[variant], className].join(' ');
+---
+
+{
+  href ? (
+    <a href={href} class={classes}>
+      <slot />
+    </a>
+  ) : (
+    <button type="button" class={classes}>
+      <slot />
+    </button>
+  )
+}

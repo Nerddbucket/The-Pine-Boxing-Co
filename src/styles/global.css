@@ -1,0 +1,50 @@
+@import '@fontsource/bebas-neue/400.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/300.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-pines-black: #0a0a0a;
+  --color-pines-charcoal: #1a1a1a;
+  --color-pines-white: #ffffff;
+  --color-pines-red: #e11d2e;
+  --color-pines-muted: #a3a3a3;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-pines-black font-body text-pines-white antialiased;
+  }
+
+  ::selection {
+    @apply bg-pines-red text-pines-white;
+  }
+}
+
+@layer utilities {
+  .pines-image-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(10, 10, 10, 0.92) 0%,
+      rgba(10, 10, 10, 0.75) 45%,
+      rgba(10, 10, 10, 0.35) 100%
+    );
+  }
+
+  .pines-grayscale {
+    filter: grayscale(100%);
+  }
+}

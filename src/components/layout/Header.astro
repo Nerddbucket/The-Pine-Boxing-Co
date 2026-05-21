@@ -1,0 +1,54 @@
+---
+import { site } from '../../config/site';
+import Logo from './Logo.astro';
+import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
+import MobileNav from '../../islands/MobileNav';
+---
+
+<header class="sticky top-0 z-50 border-b border-white/10 bg-pines-black/95 backdrop-blur-sm">
+  <div class="mx-auto flex max-w-content items-center justify-between gap-4 px-6 py-4 lg:px-8">
+    <Logo />
+
+    <nav class="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
+      {
+        site.nav.map((item) => (
+          <a
+            href={item.href}
+            class="nav-link font-display text-sm tracking-widest text-pines-white transition-colors hover:text-pines-red"
+            data-nav={item.href}
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <AcuityScheduleButton label={site.ctas.header.label} variant="solid-red" class="hidden sm:inline-flex" />
+      <MobileNav client:load />
+    </div>
+  </div>
+</header>
+
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = `#${entry.target.id}`;
+          document.querySelectorAll('.nav-link').forEach((link) => {
+            const href = link.getAttribute('href');
+            link.classList.toggle('text-pines-red', href === id);
+            link.classList.toggle('text-pines-white', href !== id);
+          });
+        }
+      });
+    },
+    { rootMargin: '-40% 0px -55% 0px' }
+  );
+
+  ['home', 'about', 'classes', 'schedule', 'membership', 'contact'].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
+</script>

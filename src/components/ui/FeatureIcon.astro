@@ -1,0 +1,36 @@
+---
+interface Props {
+  icon: string;
+}
+
+const { icon } = Astro.props;
+
+const paths: Record<string, string> = {
+  gloves:
+    'M8 12V8a4 4 0 118 0v4M6 12h12v8H6v-8z',
+  'heavy-bag':
+    'M12 3v3M9 6h6M10 9h4v12h-4V9zM8 21h8',
+  cardio:
+    'M4 12h2l2-6 4 12 2-6h2',
+  strength:
+    'M6 14h2v4H6v-4zM16 14h2v4h-2v-4zM4 10h16v2H4v-2z',
+  group:
+    'M9 11a3 3 0 106 0 3 3 0 00-6 0zM5 20v-1a4 4 0 014-4h6a4 4 0 014 4v1',
+  mindset:
+    'M12 4a4 4 0 00-4 4v2h8V8a4 4 0 00-4-4zM8 14h8v6H8v-6z',
+};
+---
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1.5"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="h-12 w-12 text-pines-red"
+  aria-hidden="true"
+>
+  <path d={paths[icon] ?? paths.gloves} />
+</svg>

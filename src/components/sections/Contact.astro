@@ -1,0 +1,56 @@
+---
+import { site } from '../../config/site';
+import Container from '../ui/Container.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+import ContactForm from '../../islands/ContactForm';
+import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
+---
+
+<section id="contact" class="bg-pines-charcoal py-20 lg:py-28">
+  <Container>
+    <div class="grid gap-16 lg:grid-cols-2">
+      <div>
+        <SectionTitle title="CONTACT" />
+        <p class="mb-8 max-w-md text-pines-muted">
+          Ready to start? Book online or reach out for membership questions and private coaching.
+        </p>
+        <div class="mb-10 border border-pines-red/40 bg-pines-black p-6">
+          <h3 class="font-display text-lg tracking-wider text-pines-white">BOOK ONLINE</h3>
+          <p class="mt-2 text-sm text-pines-muted">
+            Pick a time for your first visit, trial class, or appointment.
+          </p>
+          <AcuityScheduleButton class="mt-6" />
+        </div>
+        <dl class="space-y-4 text-sm">
+          <div>
+            <dt class="font-display tracking-wider text-pines-red">EMAIL</dt>
+            <dd class="mt-1">
+              <a href={`mailto:${site.contact.email}`} class="text-pines-white hover:text-pines-red">
+                {site.contact.email}
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt class="font-display tracking-wider text-pines-red">PHONE</dt>
+            <dd class="mt-1">
+              <a href={`tel:${site.contact.phone.replace(/\D/g, '')}`} class="text-pines-white hover:text-pines-red">
+                {site.contact.phone}
+              </a>
+            </dd>
+          </div>
+          <div>
+            <dt class="font-display tracking-wider text-pines-red">ADDRESS</dt>
+            <dd class="mt-1 text-pines-muted">{site.contact.address}</dd>
+          </div>
+          <div>
+            <dt class="font-display tracking-wider text-pines-red">HOURS</dt>
+            <dd class="mt-1 text-pines-muted">{site.contact.hours}</dd>
+          </div>
+        </dl>
+      </div>
+      <div>
+        <ContactForm client:load />
+      </div>
+    </div>
+  </Container>
+</section>

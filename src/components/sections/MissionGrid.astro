@@ -1,0 +1,34 @@
+---
+import { site } from '../../config/site';
+---
+
+<section class="grid grid-cols-1 lg:grid-cols-3" aria-labelledby="mission-heading">
+  <div
+    class="relative min-h-[320px] bg-cover bg-center pines-grayscale lg:min-h-[480px]"
+    style="background-image: url('https://images.unsplash.com/photo-1599058917765-a780eda07a3e?w=800&q=80');"
+    role="img"
+    aria-label="Boxing ring and heavy bag"
+  />
+
+  <div class="flex flex-col justify-center bg-pines-black px-8 py-16 lg:px-12 lg:py-20">
+    <h2 id="mission-heading" class="font-display text-3xl tracking-wider text-pines-red md:text-4xl">
+      {site.mission.title}
+    </h2>
+    <p class="mt-6 text-base leading-relaxed text-pines-muted">
+      {site.mission.body}
+    </p>
+    <p class="mt-10 font-display text-xl tracking-wider text-pines-white md:text-2xl">
+      {site.mission.lines[0]}
+    </p>
+    <p class="mt-2 font-display text-xl tracking-wider text-pines-red md:text-2xl">
+      {site.mission.lines[1]}
+    </p>
+  </div>
+
+  <div
+    class="relative min-h-[320px] bg-cover bg-center pines-grayscale lg:min-h-[480px]"
+    style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80');"
+    role="img"
+    aria-label="Group training at the gym"
+  />
+</section>

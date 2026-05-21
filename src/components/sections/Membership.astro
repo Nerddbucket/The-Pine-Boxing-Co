@@ -1,0 +1,46 @@
+---
+import { site } from '../../config/site';
+import Container from '../ui/Container.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
+---
+
+<section id="membership" class="bg-pines-black py-20 lg:py-28">
+  <Container>
+    <SectionTitle title={site.membership.title} />
+    <p class="mb-12 max-w-2xl text-pines-muted">{site.membership.description}</p>
+    <div class="grid gap-8 md:grid-cols-3">
+      {
+        site.membership.tiers.map((tier) => (
+          <article
+            class:list={[
+              'flex flex-col border p-8',
+              'highlighted' in tier && tier.highlighted
+                ? 'border-pines-red bg-pines-charcoal'
+                : 'border-white/10 bg-pines-charcoal',
+            ]}
+          >
+            {'highlighted' in tier && tier.highlighted && (
+              <span class="mb-4 font-display text-xs tracking-widest text-pines-red">MOST POPULAR</span>
+            )}
+            <h3 class="font-display text-2xl tracking-wider text-pines-white">{tier.name}</h3>
+            <p class="mt-4">
+              <span class="font-display text-4xl text-pines-red">{tier.price}</span>
+              <span class="ml-2 text-sm text-pines-muted">{tier.period}</span>
+            </p>
+            <ul class="mt-8 flex-1 space-y-3">
+              {tier.features.map((feature) => (
+                <li class="text-sm text-pines-muted">— {feature}</li>
+              ))}
+            </ul>
+            <AcuityScheduleButton
+              label="JOIN TODAY"
+              variant={'highlighted' in tier && tier.highlighted ? 'solid-red' : 'ghost-white'}
+              class="mt-8 w-full"
+            />
+          </article>
+        ))
+      }
+    </div>
+  </Container>
+</section>

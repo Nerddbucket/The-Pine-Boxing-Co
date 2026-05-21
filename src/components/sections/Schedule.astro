@@ -1,0 +1,26 @@
+---
+import { site } from '../../config/site';
+import Container from '../ui/Container.astro';
+import SectionTitle from '../ui/SectionTitle.astro';
+---
+
+<section id="schedule" class="bg-pines-black py-20 lg:py-28">
+  <Container>
+    <SectionTitle title={site.schedule.title} />
+    <p class="mb-12 max-w-2xl text-pines-muted">{site.schedule.description}</p>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {
+        site.schedule.days.map((day) => (
+          <div class="border border-white/10 p-5">
+            <h3 class="font-display text-xl tracking-wider text-pines-red">{day.day}</h3>
+            <ul class="mt-4 space-y-2">
+              {day.times.map((time) => (
+                <li class="text-sm text-pines-muted">{time}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</section>

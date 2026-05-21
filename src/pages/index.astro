@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+import Hero from '../components/sections/Hero.astro';
+import AboutTheGym from '../components/sections/AboutTheGym.astro';
+import MissionGrid from '../components/sections/MissionGrid.astro';
+import Classes from '../components/sections/Classes.astro';
+import Schedule from '../components/sections/Schedule.astro';
+import Membership from '../components/sections/Membership.astro';
+import Contact from '../components/sections/Contact.astro';
+---
+
+<BaseLayout>
+  <Header />
+  <main id="main">
+    <Hero />
+    <AboutTheGym />
+    <MissionGrid />
+    <Classes />
+    <Schedule />
+    <Membership />
+    <Contact />
+  </main>
+  <Footer />
+</BaseLayout>

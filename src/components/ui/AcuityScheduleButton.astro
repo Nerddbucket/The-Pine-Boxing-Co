@@ -1,0 +1,29 @@
+---
+import { site } from '../../config/site';
+
+interface Props {
+  label?: string;
+  variant?: 'solid-red' | 'ghost-white';
+  class?: string;
+}
+
+const { label = site.scheduling.buttonLabel, variant = 'solid-red', class: className = '' } = Astro.props;
+
+const base =
+  'acuity-embed-button inline-flex items-center justify-center px-8 py-3 font-display text-lg tracking-wider transition-colors duration-200 no-underline';
+
+const variants = {
+  'solid-red': 'bg-pines-red text-pines-white hover:bg-red-700',
+  'ghost-white':
+    'border border-pines-white bg-transparent text-pines-white hover:bg-pines-white hover:text-pines-black',
+};
+---
+
+<a
+  href={site.scheduling.href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class:list={[base, variants[variant], className]}
+>
+  {label}
+</a>
