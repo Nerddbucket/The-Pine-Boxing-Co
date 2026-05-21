@@ -1,70 +1,43 @@
 # The Pines Boxing Co.
 
-Single-page marketing site for **The Pines Boxing Co.** — Astro, React islands, Tailwind CSS.
+Official website for **The Pines Boxing Co.** — a community boxing gym in Southern Pines, NC.
 
-## Quick start
+**Stronger body. Sharper mind. One round at a time.**
 
-```bash
-npm install
-npm run dev
-```
+## About
 
-Open [http://localhost:4321](http://localhost:4321).
+The Pines Boxing Co. welcomes beginners and experienced fighters alike. Train boxing fundamentals, heavy bag work, and conditioning in a supportive, coach-led environment. No experience needed — all fitness levels are welcome.
 
-## Edit content
+## Visit
 
-All copy, nav links, classes, schedule, and contact info live in one file:
+| | |
+|---|---|
+| **Address** | 120 W Morganton Rd, Southern Pines, NC 28387 |
+| **Email** | [info@pinesboxing.com](mailto:info@pinesboxing.com) |
+| **Website** | [thepinesboxing.com](https://thepinesboxing.com) |
 
-**`src/config/site.ts`**
+**Hours**  
+Mon–Fri 5:30 AM – 8:00 PM · Sat 8:00 AM – 1:00 PM · Sun 9:00 AM – 12:00 PM
 
-No need to touch section components for text updates.
+## What’s on the site
 
-## Contact form
+- **Classes** — Fundamentals, heavy bag & mitts, conditioning, and invite-only sparring
+- **Summer Youth Camp** — Kids program running June through August
+- **Schedule** — Weekly class times
+- **Membership** — Drop-in, unlimited, and class pack options
+- **Book online** — Schedule appointments through Acuity Scheduling
+- **Contact** — Reach the gym by email or the on-site contact form
 
-1. Create a form at [formspree.io](https://formspree.io)
-2. Copy `.env.example` to `.env`
-3. Set `PUBLIC_FORMSPREE_ID=your_form_id`
+## Classes & training
 
-Without an ID, the form shows a success message locally (demo mode).
+- Boxing fundamentals  
+- Heavy bag training  
+- Conditioning & cardio  
+- Strength & endurance  
+- Group classes  
 
-## Build & deploy
+*Train hard. Stay humble. Keep moving forward.*
 
-```bash
-npm run build
-npm run preview
-```
+---
 
-Deploy the `dist/` folder to **Cloudflare Pages**, **Netlify**, or **Vercel**. Set the production URL in `astro.config.mjs` (`site`) and `src/config/site.ts` (`url`).
-
-## Replace placeholder assets
-
-- Logo lives at `public/logo.png` (optimized 256px). Full-res source: `public/logo-full.png`
-- Hero & mission grid use stock gym photos (Unsplash); your brand photos (`hero-hand-wrap.png`, `heavy-bag.png`) appear side-by-side in the **Brand Showcase** section below About
-- Update phone, address, email, and hours in `site.ts`
-- Replace Privacy/Terms placeholder pages before launch
-
-## Project structure
-
-```
-src/
-  config/site.ts       # All content
-  components/
-    layout/            # Header, Footer, Logo
-    sections/          # Page sections
-    ui/                # Button, SectionTitle, etc.
-  islands/             # MobileNav, ContactForm (React)
-  layouts/BaseLayout.astro
-  pages/index.astro    # Composes sections
-```
-
-## Brand tokens
-
-| Token | Hex |
-|-------|-----|
-| Black | `#0A0A0A` |
-| Charcoal | `#1A1A1A` |
-| Red | `#E11D2E` |
-| White | `#FFFFFF` |
-| Muted | `#A3A3A3` |
-
-Fonts: **Bebas Neue** (display), **Inter** (body).
+© The Pines Boxing Co. · Southern Pines, NC
