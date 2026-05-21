@@ -3,7 +3,7 @@ export const site = {
   shortName: 'THE PINES',
   subtitle: 'BOXING CO.',
   tagline: 'Stronger body. Sharper mind. One round at a time.',
-  url: 'https://thepinesboxing.com',
+  url: 'https://www.thepinesboxingco.com',
   locale: 'en-US',
   draft: false,
 

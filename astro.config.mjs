@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://thepinesboxing.com',
+  site: 'https://www.thepinesboxingco.com',
   integrations: [
     react(),
     tailwind({ applyBaseStyles: false }),

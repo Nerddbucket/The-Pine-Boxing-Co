@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thepinesboxing.com/sitemap-index.xml
+Sitemap: https://www.thepinesboxingco.com/sitemap-index.xml

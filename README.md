@@ -14,7 +14,7 @@ The Pines Boxing Co. welcomes beginners and experienced fighters alike. Train bo
 |---|---|
 | **Address** | 120 W Morganton Rd, Southern Pines, NC 28387 |
 | **Email** | [info@pinesboxing.com](mailto:info@pinesboxing.com) |
-| **Website** | [thepinesboxing.com](https://thepinesboxing.com) |
+| **Website** | [www.thepinesboxingco.com](https://www.thepinesboxingco.com) |
 
 **Hours**  
 Mon–Fri 5:30 AM – 8:00 PM · Sat 8:00 AM – 1:00 PM · Sun 9:00 AM – 12:00 PM
