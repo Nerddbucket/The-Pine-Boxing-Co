@@ -16,7 +16,7 @@ const jsonLd = {
   name: site.name,
   description: site.seo.description,
   url: site.url,
-  telephone: site.contact.phone,
+  telephone: site.contact.phones[0],
   email: site.contact.email,
   address: {
     '@type': 'PostalAddress',

@@ -85,8 +85,8 @@ export const site = {
       tagline: 'Kids learn boxing fundamentals in a fun, structured summer program.',
       description:
         'Our summer youth camp introduces kids to boxing basics — stance, footwork, hand wraps, bag work, and conditioning — in a safe, coach-led environment. No experience required. All skill levels welcome.',
-      ages: 'Ages 8–14',
-      season: 'June through August',
+      ages: 'Ages 7–12',
+      season: 'Coming soon',
       schedule: 'Mon–Fri · 9:00 AM – 12:00 PM',
       highlights: [
         'Beginner-friendly boxing fundamentals',
@@ -108,7 +108,7 @@ export const site = {
       { day: 'THU', times: ['6:00 AM Bag Work', '5:30 PM Conditioning'] },
       { day: 'FRI', times: ['6:00 AM Fundamentals', '12:00 PM Open Gym', '5:30 PM Bag Work'] },
       { day: 'SAT', times: ['9:00 AM All Levels', '11:00 AM Conditioning'] },
-      { day: 'SUN', times: ['10:00 AM Open Gym'] },
+      { day: 'SUN', times: ['Closed'] },
     ],
   },
 
@@ -117,32 +117,32 @@ export const site = {
     description: 'Simple options to get started. No long-term contracts on intro plans.',
     tiers: [
       {
-        name: 'DROP-IN',
-        price: '$25',
-        period: 'per session',
-        features: ['Single class access', 'Great for first-timers', 'Full facility access'],
+        name: '3 VISITS / WEEK',
+        price: '$80',
+        period: 'per month',
+        features: ['3 group classes per week', 'Full facility access during class times', 'Great for consistency'],
       },
       {
-        name: 'UNLIMITED',
-        price: '$149',
+        name: 'UNLIMITED ANYTIME',
+        price: '$99',
         period: 'per month',
         features: ['Unlimited group classes', 'Open gym access', 'Member events', 'Best value'],
         highlighted: true,
       },
       {
-        name: '10-CLASS PACK',
-        price: '$199',
-        period: 'pack',
-        features: ['10 classes', '3-month expiration', 'Flexible scheduling'],
+        name: 'PREMIUM',
+        price: '$150',
+        period: 'per month',
+        features: ['Unlimited access', '2 coaching sessions included', 'Priority support'],
       },
     ],
   },
 
   contact: {
     email: 'info@pinesboxing.com',
-    phone: '(555) 123-4567',
+    phones: ['(910) 315-1927', '(910) 916-5514'],
     address: '120 W Morganton Rd, Southern Pines, NC 28387',
-    hours: 'Mon–Fri 5:30 AM – 8:00 PM · Sat 8:00 AM – 1:00 PM · Sun 9:00 AM – 12:00 PM',
+    hours: 'Mon–Fri 5:00 AM – 9:00 AM & 4:00 PM – 9:00 PM · Sat 8:00 AM – 1:00 PM · Sun Closed',
   },
 
   social: {

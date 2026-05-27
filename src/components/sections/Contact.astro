@@ -33,9 +33,15 @@ import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
           <div>
             <dt class="font-display tracking-wider text-pines-red">PHONE</dt>
             <dd class="mt-1">
-              <a href={`tel:${site.contact.phone.replace(/\D/g, '')}`} class="text-pines-white hover:text-pines-red">
-                {site.contact.phone}
-              </a>
+              <div class="flex flex-col gap-1">
+                {
+                  site.contact.phones.map((phone) => (
+                    <a href={`tel:${phone.replace(/\D/g, '')}`} class="text-pines-white hover:text-pines-red">
+                      {phone}
+                    </a>
+                  ))
+                }
+              </div>
             </dd>
           </div>
           <div>
