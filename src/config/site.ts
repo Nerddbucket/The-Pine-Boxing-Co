@@ -80,22 +80,6 @@ export const site = {
         description: 'Controlled sparring for experienced members with coach supervision.',
       },
     ],
-    summerCamp: {
-      title: 'SUMMER YOUTH CAMP',
-      tagline: 'Kids learn boxing fundamentals in a fun, structured summer program.',
-      description:
-        'Our summer youth camp introduces kids to boxing basics — stance, footwork, hand wraps, bag work, and conditioning — in a safe, coach-led environment. No experience required. All skill levels welcome.',
-      ages: 'Ages 7–12',
-      season: 'Coming soon',
-      schedule: 'Mon–Fri · 9:00 AM – 12:00 PM',
-      highlights: [
-        'Beginner-friendly boxing fundamentals',
-        'Age-appropriate bag work and drills',
-        'Fitness, coordination, and confidence building',
-        'Experienced coaches · small group sizes',
-      ],
-      cta: { label: 'REGISTER FOR CAMP' },
-    },
   },
 
   schedule: {
@@ -114,33 +98,18 @@ export const site = {
 
   membership: {
     title: 'MEMBERSHIP',
-    description: 'Simple options to get started. No long-term contracts on intro plans.',
-    tiers: [
-      {
-        name: '3 VISITS / WEEK',
-        price: '$80',
-        period: 'per month',
-        features: ['3 group classes per week', 'Full facility access during class times', 'Great for consistency'],
-      },
-      {
-        name: 'UNLIMITED ANYTIME',
-        price: '$99',
-        period: 'per month',
-        features: ['Unlimited group classes', 'Open gym access', 'Member events', 'Best value'],
-        highlighted: true,
-      },
-      {
-        name: 'PREMIUM',
-        price: '$150',
-        period: 'per month',
-        features: ['Unlimited access', '2 coaching sessions included', 'Priority support'],
-      },
-    ],
+    description: 'Flexible plans for every training style — details launching soon.',
+    comingSoon: {
+      label: 'COMING SOON',
+      headline: 'Membership tiers on the way',
+      body: 'We’re finalizing membership options including 3 visits per week, unlimited anytime access, and premium coaching. Reach out or book a visit in the meantime.',
+      plannedTiers: ['3 Visits / Week', 'Unlimited Anytime', 'Premium'],
+    },
   },
 
   contact: {
     email: 'info@pinesboxing.com',
-    phones: ['(910) 315-1927', '(910) 916-5514'],
+    phones: ['(910) 315-1927'],
     address: '120 W Morganton Rd, Southern Pines, NC 28387',
     hours: 'Mon–Fri 5:00 AM – 9:00 AM & 4:00 PM – 9:00 PM · Sat 8:00 AM – 1:00 PM · Sun Closed',
   },
