@@ -35,7 +35,7 @@ export const site = {
     line2: 'ONE ROUND AT A TIME.',
     description:
       'The Pines Boxing Co. is a community-focused boxing gym built for beginners and experienced fighters alike. Train with purpose, build confidence, and leave every session stronger than you arrived.',
-    video: '/hero-video.mov',
+    image: '/hero-boxing.png',
   },
 
   about: {
