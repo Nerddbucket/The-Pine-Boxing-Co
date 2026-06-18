@@ -2,31 +2,49 @@ import { useState, type FormEvent } from 'react';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
-export default function ContactForm() {
+interface ContactFormProps {
+  recipientEmail: string;
+}
+
+export default function ContactForm({ recipientEmail }: ContactFormProps) {
   const [status, setStatus] = useState<Status>('idle');
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const honeypot = (form.elements.namedItem('website') as HTMLInputElement)?.value;
+    const honeypot = (form.elements.namedItem('_gotcha') as HTMLInputElement)?.value;
     if (honeypot) return;
 
     setStatus('submitting');
 
-    // Formspree: replace YOUR_FORM_ID with client's endpoint when ready
     const formId = import.meta.env.PUBLIC_FORMSPREE_ID;
-    if (!formId) {
-      setStatus('success');
-      form.reset();
-      return;
-    }
+    const payload = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+      _subject: 'New contact form message — The Pines Boxing Co.',
+      _replyto: (form.elements.namedItem('email') as HTMLInputElement).value,
+      _captcha: 'false',
+      _template: 'table',
+    };
 
     try {
-      const res = await fetch(`https://formspree.io/f/${formId}`, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' },
-      });
+      const res = formId
+        ? await fetch(`https://formspree.io/f/${formId}`, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' },
+          })
+        : await fetch(`https://formsubmit.co/ajax/${encodeURIComponent(recipientEmail)}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+
       if (res.ok) {
         setStatus('success');
         form.reset();
@@ -42,7 +60,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <input
         type="text"
-        name="website"
+        name="_gotcha"
         tabIndex={-1}
         autoComplete="off"
         className="absolute -left-[9999px]"

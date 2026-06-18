@@ -55,7 +55,7 @@ import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
         </dl>
       </div>
       <div>
-        <ContactForm client:load />
+        <ContactForm client:load recipientEmail={site.contact.email} />
       </div>
     </div>
   </Container>
