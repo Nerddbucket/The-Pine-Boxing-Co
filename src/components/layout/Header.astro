@@ -1,7 +1,6 @@
 ---
 import { site } from '../../config/site';
 import Logo from './Logo.astro';
-import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
 import MobileNav from '../../islands/MobileNav';
 ---
 
@@ -23,10 +22,7 @@ import MobileNav from '../../islands/MobileNav';
       }
     </nav>
 
-    <div class="flex items-center gap-4">
-      <AcuityScheduleButton label={site.ctas.header.label} variant="solid-red" class="hidden sm:inline-flex" />
-      <MobileNav client:load />
-    </div>
+    <MobileNav client:load />
   </div>
 </header>
 
@@ -47,7 +43,7 @@ import MobileNav from '../../islands/MobileNav';
     { rootMargin: '-40% 0px -55% 0px' }
   );
 
-  ['home', 'about', 'classes', 'schedule', 'membership', 'contact'].forEach((id) => {
+  ['home', 'about', 'classes', 'schedule', 'contact'].forEach((id) => {
     const el = document.getElementById(id);
     if (el) observer.observe(el);
   });

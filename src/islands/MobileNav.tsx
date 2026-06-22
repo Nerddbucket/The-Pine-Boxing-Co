@@ -33,15 +33,6 @@ export default function MobileNav() {
                 {item.label}
               </a>
             ))}
-            <a
-              href={site.scheduling.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="acuity-embed-button mt-4 inline-flex justify-center bg-pines-red px-8 py-3 font-display text-lg tracking-wider text-pines-white no-underline"
-            >
-              {site.ctas.header.label}
-            </a>
           </nav>
         </div>
       )}

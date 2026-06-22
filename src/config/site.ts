@@ -12,7 +12,6 @@ export const site = {
     { label: 'ABOUT', href: '#about' },
     { label: 'CLASSES', href: '#classes' },
     { label: 'SCHEDULE', href: '#schedule' },
-    { label: 'MEMBERSHIP', href: '#membership' },
     { label: 'CONTACT', href: '#contact' },
   ],
 
@@ -25,9 +24,7 @@ export const site = {
   },
 
   ctas: {
-    header: { label: 'JOIN TODAY' },
     heroPrimary: { label: 'OUR CLASSES', href: '#classes' },
-    heroSecondary: { label: 'SCHEDULE APPOINTMENT' },
   },
 
   hero: {
@@ -96,17 +93,6 @@ export const site = {
     ],
   },
 
-  membership: {
-    title: 'MEMBERSHIP',
-    description: 'Flexible plans for every training style — details launching soon.',
-    comingSoon: {
-      label: 'COMING SOON',
-      headline: 'Membership tiers on the way',
-      body: 'We’re finalizing membership options including 3 visits per week, unlimited anytime access, and premium coaching. Reach out or book a visit in the meantime.',
-      plannedTiers: ['3 Visits / Week', 'Unlimited Anytime', 'Premium'],
-    },
-  },
-
   contact: {
     email: 'info@pinesboxing.com',
     phones: ['(910) 315-1927'],
@@ -127,7 +113,7 @@ export const site = {
   seo: {
     title: 'The Pines Boxing Co. | Boxing Gym',
     description:
-      'Train boxing fundamentals, heavy bag work, and conditioning at The Pines Boxing Co. All fitness levels welcome. Join today.',
+      'Train boxing fundamentals, heavy bag work, and conditioning at The Pines Boxing Co. All fitness levels welcome.',
     ogImage: '/logo-full.png',
   },
 } as const;

@@ -2,7 +2,6 @@
 import { site } from '../../config/site';
 import Container from '../ui/Container.astro';
 import Button from '../ui/Button.astro';
-import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
 ---
 
 <section
@@ -35,7 +34,6 @@ import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
         <Button href={site.ctas.heroPrimary.href} variant="solid-red">
           {site.ctas.heroPrimary.label}
         </Button>
-        <AcuityScheduleButton label={site.ctas.heroSecondary.label} variant="ghost-white" />
       </div>
     </div>
   </Container>
