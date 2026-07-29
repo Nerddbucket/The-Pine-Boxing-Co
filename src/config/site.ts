@@ -10,7 +10,7 @@ export const site = {
     { label: 'HOME', href: '#home' },
     { label: 'ABOUT', href: '#about' },
     { label: 'CLASSES', href: '#classes' },
-    { label: 'SCHEDULE', href: '#schedule' },
+    { label: 'JOIN', href: '#join' },
     { label: 'CONTACT', href: '#contact' },
   ],
 
@@ -22,11 +22,19 @@ export const site = {
       module: 'calendar',
       widgetInstanceId: '15c8cf65-daed-4b5c-94fe-e7e28cfe92db',
     },
+    membership: {
+      module: 'membership',
+      widgetInstanceId: '28dff7cd-68e1-4609-a064-a09cfd6f2ab8',
+    },
   },
 
-  schedule: {
-    title: 'CLASS SCHEDULE',
-    description: 'Browse upcoming classes and book your spot online.',
+  join: {
+    title: 'JOIN',
+    description: 'Book a class or enroll in a membership online.',
+    scheduleLabel: 'CLASS SCHEDULE',
+    scheduleDescription: 'Browse upcoming classes and reserve your spot.',
+    membershipLabel: 'MEMBERSHIP',
+    membershipDescription: 'Review plans and complete enrollment online.',
   },
 
   ctas: {
