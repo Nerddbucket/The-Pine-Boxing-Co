@@ -89,7 +89,6 @@ export const site = {
     email: 'info@pinesboxing.com',
     phones: ['(910) 246-8429'],
     address: '120 W Morganton Rd, Southern Pines, NC 28387',
-    hours: 'Mon–Fri 5:00 AM – 9:00 AM & 4:00 PM – 9:00 PM · Sat 8:00 AM – 1:00 PM · Sun Closed',
   },
 
   social: {
