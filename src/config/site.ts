@@ -79,8 +79,8 @@ export const site = {
         description: 'High-energy rounds focused on cardio, core, and full-body endurance.',
       },
       {
-        name: 'SPARRING (INVITE ONLY)',
-        description: 'Controlled sparring for experienced members with coach supervision.',
+        name: 'KIDS TRAINING',
+        description: 'Age-appropriate boxing fundamentals that build confidence, coordination, and discipline in a fun, coach-led environment.',
       },
     ],
   },
