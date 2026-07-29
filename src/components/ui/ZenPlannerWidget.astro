@@ -1,0 +1,68 @@
+---
+interface Props {
+  module: string;
+  partitionApiKey: string;
+  widgetInstanceId: string;
+  host?: string;
+  scriptPath?: string;
+  class?: string;
+}
+
+const {
+  module,
+  partitionApiKey,
+  widgetInstanceId,
+  host = 'https://studio.zenplanner.com',
+  scriptPath = 'zenplanner/studio/target/zp-widget-direct.js',
+  class: className = '',
+} = Astro.props;
+
+// Zen Planner calendar widgets mount on this exact id pattern.
+const containerId =
+  module === 'calendar' ? `calendar_${widgetInstanceId}` : `${module}_${widgetInstanceId}`;
+---
+
+<div class:list={['zenplanner-embed', className]}>
+  <div id={containerId}></div>
+</div>
+
+<script
+  is:inline
+  define:vars={{ host, scriptPath, module, partitionApiKey, widgetInstanceId }}
+>
+  (function (win, doc, zenJSHost, src, moduleName, partitionKey, instanceId) {
+    win.zenplanner = win.zenplanner || {};
+    win.zenplanner.directLoadArgs = win.zenplanner.directLoadArgs || [];
+    var tryCount = 0;
+    var intervalId = null;
+
+    function afterLoad() {
+      if (win.zenplanner.directLoader !== undefined && win.zenplanner.directLoader !== null) {
+        clearInterval(intervalId);
+        for (var i = 0, l = win.zenplanner.directLoadArgs.length; l > i; i++) {
+          if (win.zenplanner.directLoadArgs[i].widgetInstanceId === instanceId) {
+            win.zenplanner.directLoader.loadWidget(zenJSHost, moduleName, partitionKey, instanceId);
+          }
+        }
+      } else if (tryCount++ > 200) {
+        console.log('Zen Planner widget : ' + moduleName + ', failed to load.');
+        clearInterval(intervalId);
+      }
+    }
+
+    if (win.zenplanner.directLoader === undefined || win.zenplanner.directLoader === null) {
+      win.zenplanner.directLoadArgs.push({
+        module: moduleName,
+        partitionApiKey: partitionKey,
+        widgetInstanceId: instanceId,
+      });
+      var s = doc.createElement('script');
+      s.async = 1;
+      s.src = zenJSHost + '/' + src;
+      doc.head.appendChild(s);
+      intervalId = setInterval(afterLoad, 50);
+    } else {
+      win.zenplanner.directLoader.loadWidget(zenJSHost, moduleName, partitionKey, instanceId);
+    }
+  })(window, document, host, scriptPath, module, partitionApiKey, widgetInstanceId);
+</script>

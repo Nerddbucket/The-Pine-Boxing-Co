@@ -1,7 +1,6 @@
 ---
 import '../styles/global.css';
 import { site } from '../config/site';
-import AcuityEmbed from '../components/AcuityEmbed.astro';
 
 interface Props {
   title?: string;
@@ -49,7 +48,6 @@ const jsonLd = {
     <meta name="twitter:image" content={new URL(site.seo.ogImage, site.url).href} />
 
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-    <AcuityEmbed />
   </head>
   <body>
     <a
@@ -58,15 +56,7 @@ const jsonLd = {
     >
       Skip to main content
     </a>
-    {
-      site.draft && (
-        <div class="bg-pines-red py-2 text-center font-display text-sm tracking-widest text-pines-white">
-          DRAFT PREVIEW — NOT LIVE
-        </div>
-      )
-    }
     <slot />
-    <script src={site.scheduling.scriptUrl} async></script>
     <script is:inline>
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener('click', (e) => {

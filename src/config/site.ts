@@ -5,7 +5,6 @@ export const site = {
   tagline: 'Stronger body. Sharper mind. One round at a time.',
   url: 'https://www.thepinesboxingco.com',
   locale: 'en-US',
-  draft: false,
 
   nav: [
     { label: 'HOME', href: '#home' },
@@ -15,12 +14,19 @@ export const site = {
     { label: 'CONTACT', href: '#contact' },
   ],
 
-  scheduling: {
-    ownerId: '39358236',
-    href: 'https://app.acuityscheduling.com/schedule.php?owner=39358236&ref=booking_button',
-    buttonLabel: 'Schedule Appointment',
-    cssUrl: 'https://embed.acuityscheduling.com/embed/button/39358236.css',
-    scriptUrl: 'https://embed.acuityscheduling.com/embed/button/39358236.js',
+  zenplanner: {
+    host: 'https://studio.zenplanner.com',
+    scriptPath: 'zenplanner/studio/target/zp-widget-direct.js',
+    partitionApiKey: 'f8a09dbf-b010-44f5-b82e-99063e244391',
+    calendar: {
+      module: 'calendar',
+      widgetInstanceId: '15c8cf65-daed-4b5c-94fe-e7e28cfe92db',
+    },
+  },
+
+  schedule: {
+    title: 'CLASS SCHEDULE',
+    description: 'Browse upcoming classes and book your spot online.',
   },
 
   ctas: {
@@ -79,23 +85,9 @@ export const site = {
     ],
   },
 
-  schedule: {
-    title: 'CLASS SCHEDULE',
-    description: 'Sample weekly schedule — update times in site.ts when the client confirms.',
-    days: [
-      { day: 'MON', times: ['6:00 AM Fundamentals', '12:00 PM Conditioning', '6:30 PM Bag Work'] },
-      { day: 'TUE', times: ['6:00 AM Conditioning', '5:30 PM Fundamentals'] },
-      { day: 'WED', times: ['6:00 AM Fundamentals', '12:00 PM Bag Work', '6:30 PM Conditioning'] },
-      { day: 'THU', times: ['6:00 AM Bag Work', '5:30 PM Conditioning'] },
-      { day: 'FRI', times: ['6:00 AM Fundamentals', '12:00 PM Open Gym', '5:30 PM Bag Work'] },
-      { day: 'SAT', times: ['9:00 AM All Levels', '11:00 AM Conditioning'] },
-      { day: 'SUN', times: ['Closed'] },
-    ],
-  },
-
   contact: {
     email: 'info@pinesboxing.com',
-    phones: ['(910) 315-1927'],
+    phones: ['(910) 246-8429'],
     address: '120 W Morganton Rd, Southern Pines, NC 28387',
     hours: 'Mon–Fri 5:00 AM – 9:00 AM & 4:00 PM – 9:00 PM · Sat 8:00 AM – 1:00 PM · Sun Closed',
   },

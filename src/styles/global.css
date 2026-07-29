@@ -48,3 +48,15 @@
     filter: grayscale(100%);
   }
 }
+
+/* Zen Planner embed sits inside site chrome; keep overflow clean on mobile */
+.zenplanner-embed {
+  min-height: 28rem;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.zenplanner-embed iframe,
+.zenplanner-embed > div {
+  max-width: 100%;
+}

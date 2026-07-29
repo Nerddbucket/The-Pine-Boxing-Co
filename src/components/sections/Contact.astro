@@ -3,7 +3,7 @@ import { site } from '../../config/site';
 import Container from '../ui/Container.astro';
 import SectionTitle from '../ui/SectionTitle.astro';
 import ContactForm from '../../islands/ContactForm';
-import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
+import Button from '../ui/Button.astro';
 ---
 
 <section id="contact" class="bg-pines-charcoal py-20 lg:py-28">
@@ -12,14 +12,16 @@ import AcuityScheduleButton from '../ui/AcuityScheduleButton.astro';
       <div>
         <SectionTitle title="CONTACT" />
         <p class="mb-8 max-w-md text-pines-muted">
-          Ready to start? Book online or reach out for membership questions and private coaching.
+          Ready to start? Book a class online or reach out for membership questions and private coaching.
         </p>
         <div class="mb-10 border border-pines-red/40 bg-pines-black p-6">
           <h3 class="font-display text-lg tracking-wider text-pines-white">BOOK ONLINE</h3>
           <p class="mt-2 text-sm text-pines-muted">
             Pick a time for your first visit, trial class, or appointment.
           </p>
-          <AcuityScheduleButton class="mt-6" />
+          <Button href="#schedule" variant="solid-red" class="mt-6">
+            VIEW SCHEDULE
+          </Button>
         </div>
         <dl class="space-y-4 text-sm">
           <div>
